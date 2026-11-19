@@ -1,0 +1,6 @@
+{
+  "name": "AXIOS TV",
+  "description": "منصة AXIOS TV لتحميل التطبيقات المعدلة والنسخ المفتوحة للأندرويد والتلفاز الذكي بأمان وتحقق فوري.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

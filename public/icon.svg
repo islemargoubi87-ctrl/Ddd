@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1D4ED8" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+  <!-- TV Screen Outline -->
+  <rect x="92" y="128" width="268" height="196" rx="28" fill="#FFFFFF" fill-opacity="0.12" stroke="#FFFFFF" stroke-width="22" />
+  <path d="M178 360H274" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round" />
+  <!-- Play / APK Arrow inside TV -->
+  <path d="M226 176V270M226 270L188 234M226 270L264 234" stroke="#FFFFFF" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Android Phone Card overlapping bottom-right -->
+  <rect x="292" y="208" width="128" height="204" rx="26" fill="#2563EB" stroke="#FFFFFF" stroke-width="18" />
+  <rect x="336" y="232" width="40" height="8" rx="4" fill="#BFDBFE" />
+  <circle cx="356" cy="368" r="10" fill="#FFFFFF" />
+  <path d="M356 272V334M356 334L334 312M356 334L378 312" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
