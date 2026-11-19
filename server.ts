@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import http from 'node:http';
 import path from 'node:path';
 import { Readable } from 'node:stream';
 import type { ReadableStream as NodeWebReadableStream } from 'node:stream/web';
@@ -97,6 +98,7 @@ async function proxyApkStream(
 
 async function startServer() {
   const app = express();
+  const httpServer = http.createServer(app);
 
   app.get('/api/health', (_req, res) => {
     res.json({ ok: true, service: 'axios-tv' });
@@ -210,13 +212,17 @@ async function startServer() {
   } else {
     const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: {
+        middlewareMode: true,
+        allowedHosts: true,
+        ws: { server: httpServer },
+      },
       appType: 'spa',
     });
     app.use(vite.middlewares);
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
+  httpServer.listen(PORT, '0.0.0.0', () => {
     console.log(`AXIOS TV server listening on http://0.0.0.0:${PORT}`);
   });
 }
